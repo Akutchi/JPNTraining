@@ -28,6 +28,7 @@ xhr.onload = function () {
             
             for(var i = 0; i < 3; i++){
                 var v = u[i].split(" ");
+                console.log(v);
                 charList.push({kanji:v[0], kun:v[1], on:v[2], meaning:v[3]});
     
             }
