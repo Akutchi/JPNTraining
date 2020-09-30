@@ -30,7 +30,7 @@ xhr.onload = function () {
 
 xhr.send(null);
 
-for(int i = 0; i < u.length; i++){
+for(int i = 0; i < 3; i++){
     charList.push({kanji:u[i][0]});
     
 }
