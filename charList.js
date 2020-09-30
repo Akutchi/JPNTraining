@@ -11,6 +11,22 @@ var charList= [
     {name: "ko", char:"こ"}
 ];
 
+var xhr = new XMLHttpRequest();
+xhr.open('GET', '/katana.txt', true);
+
+// If specified, responseType must be empty string or "text"
+xhr.responseType = 'text';
+
+xhr.onload = function () {
+    if (xhr.readyState === xhr.DONE) {
+        if (xhr.status === 200) {
+            xhr.responseText.split("\n");
+            console.log(xhr);
+        }
+    }
+};
+
+xhr.send(null);
 
 /*
 Next code is for false random to stop getting the sames symbols
