@@ -24,6 +24,7 @@ function getRandomChar(){
     return remainingCharList.splice(i, 1)[0];
 }
 
+//useless for me
 function getImgLink(character){
     return "./img/Hiragana_" + character +"_stroke_order_animation.gif"
 }
