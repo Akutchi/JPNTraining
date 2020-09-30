@@ -12,7 +12,7 @@ var charList= [
 ];
 
 var xhr = new XMLHttpRequest();
-xhr.open('GET', '/katana.txt', true);
+xhr.open('GET', '/kanji.txt', true);
 
 // If specified, responseType must be empty string or "text"
 xhr.responseType = 'text';
