@@ -20,8 +20,8 @@ xhr.responseType = 'text';
 xhr.onload = function () {
     if (xhr.readyState === xhr.DONE) {
         if (xhr.status === 200) {
-            xhr.responseText.split("\n");
-            console.log(xhr);
+            console.log(xhr.responseText.split("\n"));
+            
         }
     }
 };
