@@ -13,6 +13,7 @@
 
 var u = [];
 var charList = [];
+
 var xhr = new XMLHttpRequest();
 xhr.open('GET', '/kanji.txt', true);
 
@@ -23,6 +24,7 @@ xhr.onload = function () {
     if (xhr.readyState === xhr.DONE) {
         if (xhr.status === 200) {
             u = xhr.responseText.split("\n");
+            console.log(u);
             
         }
     }
