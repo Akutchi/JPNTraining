@@ -11,6 +11,8 @@ var charList= [
     {name: "ko", char:"こ"}
 ];
 
+var u = [];
+var charList = [];
 var xhr = new XMLHttpRequest();
 xhr.open('GET', '/kanji.txt', true);
 
@@ -20,13 +22,18 @@ xhr.responseType = 'text';
 xhr.onload = function () {
     if (xhr.readyState === xhr.DONE) {
         if (xhr.status === 200) {
-            console.log(xhr.responseText.split("\n"));
+            u = xhr.responseText.split("\n");
             
         }
     }
 };
 
 xhr.send(null);
+
+for(int i = 0; i < u.length; i++){
+    charList.push({kanji:u[i][0]});
+    
+}
 
 /*
 Next code is for false random to stop getting the sames symbols
