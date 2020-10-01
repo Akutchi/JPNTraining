@@ -44,9 +44,9 @@ Next code is for false random to stop getting the sames symbols
 */
 var remainingCharList = [];
 function getRandomChar(){
-    if(remainingCharList.length == 0)
+    if(remainingCharList.length == 0){
         remainingCharList = charList.slice(0);//Copy charList
-    
+    }
     var i = Math.floor(Math.random()*remainingCharList.length);
     return remaningCharList.splice(i, 1);
     //return remainingCharList.splice(i, 1)[0];
