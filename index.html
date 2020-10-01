@@ -28,9 +28,18 @@ function newQu(e){
 function randomChar(){
     document.getElementById("respInput").value = "";
     document.getElementById("cheatButton").style.visibility = "hidden";
+    
     var ch = getRandomChar();    
-    currentChar = ch.kanji;
-    document.getElementById("meaning").innerText = ch.meaning;
+    var list_of_possibilites = ["kanji", "kun", "on", "meaning"]
+    var choice = list_of_possibilites[Math.floor(Math.random()*4)]
+    currentChar = ch[choice];
+    
+    if(choice == "kanji"){
+        document.getElementById("meaning").innerText = ch.meaning; // affiche le sens
+    }else if(choice == "meaning"){
+        document.getElementById("kanji").innerText = ch.kanji; // affiche le kanji
+    }
+    
     document.getElementById("respDisplay").innerText="";
     waitingForNextQu = false;
 }
