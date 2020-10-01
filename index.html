@@ -50,7 +50,7 @@ function cheat(){
 function onSend(e){
     e.preventDefault();
     var resp = document.getElementById("respInput").value;
-    if(resp.toLowerCase() == currentChar){
+    if(resp == currentChar){
         if(!waitingForNextQu){
             waitingForNextQu = true;
             successiveErrorStreak = 0;
