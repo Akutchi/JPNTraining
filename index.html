@@ -34,9 +34,9 @@ function randomChar(){
     currentChar = ch[choice];
     
     if(choice == "kanji"){
-        document.getElementById("meaning").innerText = ch.meaning; // affiche le sens
+        document.getElementById("char").innerText = ch.meaning; // affiche le sens
     }else if(choice == "meaning"){
-        document.getElementById("kanji").innerText = ch.kanji; // affiche le kanji
+        document.getElementById("char").innerText = ch.kanji; // affiche le kanji
     }
     
     document.getElementById("respDisplay").innerText="";
