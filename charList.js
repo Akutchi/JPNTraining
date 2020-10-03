@@ -48,7 +48,7 @@ function getRandomChar(){
         remainingCharList = charList.slice(0);//Copy charList
     }
     var i = Math.floor(Math.random()*remainingCharList.length);
-    return remaningCharList.splice(i, 1);
+    return remainingCharList.splice(i, 1);
     //return remainingCharList.splice(i, 1)[0];
 }
 
