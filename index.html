@@ -34,7 +34,7 @@ function randomChar(){
     var choice = list_of_possibilites[Math.floor(Math.random()*3)];
     var choice_read = "0";
     
-    while(!choice_read){
+    while(choice_read == "0"){
         choice_read = list_read[Math.floor(Math.random()*1)];
     }
     
