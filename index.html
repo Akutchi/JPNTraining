@@ -29,9 +29,9 @@ function randomChar(){
     document.getElementById("cheatButton").style.visibility = "hidden";
     
     var ch = getRandomChar();    
-    var list_of_possibilites = ["kanji", "kun", "on", "meaning"];
+    var list_of_possibilites = ["kanji", "meaning"];
     var list_read = ["kun", "on"];
-    var choice = list_of_possibilites[Math.floor(Math.random()*3)];
+    var choice = list_of_possibilites[Math.floor(Math.random()*1)];
     var choice_read = "0";
     
     while(choice_read == "0"){
@@ -45,7 +45,7 @@ function randomChar(){
         
     }else if(choice == "meaning"){
         document.getElementById("char").innerText = ch.kanji; // affiche le kanji
-         document.getElementById("out").innerText = choice_read;
+        document.getElementById("out").innerText = choice_read;
         
     }
     
