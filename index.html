@@ -31,11 +31,11 @@ function randomChar(){
     var ch = getRandomChar();    
     var list_of_possibilites = ["kanji", "meaning"];
     var list_read = ["kun", "on"];
-    var choice = list_of_possibilites[Math.floor(Math.random()*1)];
+    var choice = list_of_possibilites[Math.floor(Math.random()*2)];
     var choice_read = "0";
     
     while(choice_read == "0"){
-        choice_read = list_read[Math.floor(Math.random()*1)];
+        choice_read = list_read[Math.floor(Math.random()*2)];
     }
     
     currentChar = ch[choice];
