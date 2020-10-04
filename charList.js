@@ -24,13 +24,10 @@ xhr.onload = function () {
     if (xhr.readyState === xhr.DONE) {
         if (xhr.status === 200) {
             u = xhr.responseText.split("\n");
-            console.log(u);
             
             for(var i = 0; i < 3; i++){
                 var v = u[i].split(" ");
-                console.log(v);
                 charList.push({kanji:v[0], kun:v[1], on:v[2], meaning:v[3]});
-                console.log(charList);
             }
             randomChar();
             
