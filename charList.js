@@ -27,8 +27,8 @@ xhr.onload = function () {
             
             for(var i = 0; i < 3; i++){
                 var v = u[i].split(" ");
-                charList.push({kanji:v[0], kun:v[1], on:v[2], meaning:v[3].split("\r\n")});
-                 console.log(CharList);
+                charList.push({kanji:v[0], kun:v[1], on:v[2], meaning:v[3].split("\r\n")[0]});
+                 console.log(v);
             }
             randomChar();
             
