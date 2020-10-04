@@ -29,14 +29,23 @@ function randomChar(){
     document.getElementById("cheatButton").style.visibility = "hidden";
     
     var ch = getRandomChar();    
-    var list_of_possibilites = ["kanji", "kun", "on", "meaning"]
-    var choice = list_of_possibilites[Math.floor(Math.random()*4)]
+    var list_of_possibilites = ["kanji", "kun", "on", "meaning"];
+    var list_read = ["kun", "on"];
+    var choice = list_of_possibilites[Math.floor(Math.random()*4)];
+    var choice_read = "0";
+    
+    while(!choice_read){
+        choice_read = list_read[Math.floor(Math.random()*1)];
+    }
+    
     currentChar = ch[choice];
     
     if(choice == "kanji"){
         document.getElementById("char").innerText = ch.meaning; // affiche le sens
+        
     }else if(choice == "meaning"){
         document.getElementById("char").innerText = ch.kanji; // affiche le kanji
+        
     }
     
     document.getElementById("respDisplay").innerText="";
@@ -72,6 +81,7 @@ function onSend(e){
 <body>
     <main>
         <form id="form">
+            <p> text </p>
             <div id="char"> </div>
            
             <input id="respInput" />
